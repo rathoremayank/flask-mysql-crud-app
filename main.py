@@ -4,7 +4,13 @@ from db_config import mysql
 from flask import jsonify
 from flask import flash, request
 from werkzeug.security import generate_password_hash, check_password_hash
-		
+
+
+@app.route("/", methods=['GET'])
+def index():
+    return "This app is working!!!";
+
+
 @app.route('/add', methods=['POST'])
 def add_user():
 	try:
